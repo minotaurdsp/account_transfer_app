@@ -7,12 +7,10 @@ def make_exchange(amount, from_currency, to_currency):
     from_rate = CurrencyRateIndex.objects.filter(iso_code=from_currency)
     to_rate = CurrencyRateIndex.objects.filter(iso_code=to_currency)
     if not from_rate.exists() and not from_currency == 'USD':
-        print "ERROR !!"
-        print "Can not make exchange becouse CurrencyRateIndex not exist iso_code : %s " % from_currency
+        print "ERROR Can not make exchange becouse CurrencyRateIndex not exist iso_code : %s " % from_currency
         return False
     elif not to_rate.exists() and not to_currency == 'USD':
-        print "ERROR !!"
-        print "Can not make exchange becouse CurrencyRateIndex not exist iso_code : %s " % to_currency
+        print "ERROR Can not make exchange becouse CurrencyRateIndex not exist iso_code : %s " % to_currency
         return False
     else:
         if from_currency == 'USD':

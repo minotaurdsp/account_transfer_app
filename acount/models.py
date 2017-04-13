@@ -157,8 +157,7 @@ class Account(Base):
 
             return (trans_src.uid, None, False, "")
 
-        except Exception, e:
-            print e
+        except:
             return (None, None, True, "Server error ")
 
     def __str__(self):

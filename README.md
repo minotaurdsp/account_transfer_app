@@ -9,10 +9,10 @@ source env/bin/activate
 
 pip install -r requirements.txt
 
-Collect currency index
-./manage.py update_currency_rate_index  
 
-Create demo accounts 
+## setup
+./manage.py migrate
+./manage.py update_currency_rate_index   
 ./manage.py init_demo_data
 
 
