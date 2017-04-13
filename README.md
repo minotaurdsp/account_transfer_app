@@ -14,6 +14,7 @@ pip install -r requirements.txt
 ./manage.py migrate
 ./manage.py update_currency_rate_index   
 ./manage.py init_demo_data
+./manage.py init_demo_apikey
 
 
 ## ./manage.py shell
